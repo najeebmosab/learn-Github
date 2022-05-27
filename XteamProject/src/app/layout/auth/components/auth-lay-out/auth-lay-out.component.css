@@ -1,0 +1,9 @@
+.login-page {
+    height: 100vh;
+    background-color: #dcdcdc;
+}
+
+.login-page>.container,
+.login-page .row {
+    height: 100% !important;
+}

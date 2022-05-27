@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" class="w-50">
+                <span class="p-float-label mt-5">
+              <input id="float-input-invalid" type="text" pInputText [(ngModel)]="userName" class="ng-dirty w-100" [ngModelOptions]="{standalone: true}">
+              <label for="float-input-invalid">User Name</label>
+            </span>
+
+                <span class="p-float-label mt-5">
+              <input id="float-input-invalid" type="email" pInputText [(ngModel)]="email"   class=" ng-dirt w-100" [ngModelOptions]="{standalone: true}">
+              <label for="float-input-invalid">Email</label>
+            </span>
+
+
+                <span class="p-float-label mt-5 w-100">
+                  <p-password id="float-input-invalid" type="password" [toggleMask]="true"  strongRegex="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})"  [(ngModel)]="password"   class="ng-dirt w-100" [ngModelOptions]="{standalone: true}"></p-password>
+              <label for="float-input-invalid">Password</label>
+            </span>
+
+                <span class="p-float-label mt-5">
+              <input id="float-input-invalid" type="password" pInputText [(ngModel)]="confarmPassword" class=" ng-dirty w-100" [ngModelOptions]="{standalone: true}">
+              <label for="float-input-invalid">Confarm Password</label>
+            </span>
+                <button type="submit" (click)="AddUser()" class="btn btn-primary mt-5 w-100 "> submit  </button>
+            </form>
+        </div>
+
+    </div>
+</div>

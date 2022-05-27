@@ -1,0 +1,14 @@
+<div class="shad">
+</div>
+
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let data of Datas">
+        <div class="picsum-img-wrapper">
+            <img class="toPositon" src="{{data.imgPath}}" alt="Random first slide">
+        </div>
+        <!-- <div class="carousel-caption">
+            <h3>{{data.productName}}</h3>
+            <p>{{data.Discripotion}}</p>
+        </div> -->
+    </ng-template>
+</ngb-carousel>

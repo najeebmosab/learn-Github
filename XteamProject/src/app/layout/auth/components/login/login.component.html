@@ -1,0 +1,54 @@
+<div class="container">
+
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-5">
+            <form class="form-login" [formGroup]="LoginForm" (ngSubmit)="login(email.value,password.value)">
+
+                <i class="fas fa-users"></i>
+
+                <div class="form-group">
+                    <input #email type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small *ngIf="LoginForm.controls?.email?.touched && LoginForm.controls?.email?.errors?.minlength" class="form-text  text-danger">email must be more than 5 charactors
+                    </small>
+
+                    <small *ngIf="LoginForm.controls?.email?.touched &&
+                                LoginForm.controls?.email?.errors?.required" class="form-text  text-danger">Email is
+                        requierd
+                    </small>
+
+
+                    <small *ngIf="LoginForm.controls?.email?.touched &&
+                                LoginForm.controls?.email?.errors?.email" class="form-text  text-danger">Enter Invaled
+                        Email
+                    </small>
+                </div>
+                <div class="form-group">
+                    <p-password formControlName="password" #password [toggleMask]="true"></p-password>
+                    <!-- <input #password type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> -->
+                    <small *ngIf="LoginForm.controls?.password?.touched && LoginForm.controls?.password?.errors?.minlength" class="form-text  text-danger">password min Length is 6
+                    </small>
+                    <small *ngIf="LoginForm.controls?.password?.touched && LoginForm.controls?.password?.errors?.maxlength" class="form-text  text-danger">password Max Length is 16
+                    </small>
+                    <small *ngIf="LoginForm.controls?.password?.touched &&
+                                            LoginForm.controls?.password?.errors?.required" class="form-text  text-danger">password is requierd
+                    </small>
+
+
+                    <small *ngIf="LoginForm.controls?.password?.touched &&
+                                            LoginForm.controls?.password?.errors?.invalidPassword" class="form-text  text-danger">Enter Invaled password
+                    </small>
+
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+
+
+
+            </form>
+            <a routerLink="/login/SingUp">SingUp</a>
+        </div>
+    </div>
+</div>

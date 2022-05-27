@@ -1,0 +1,29 @@
+body {
+    overflow-x: hidden;
+}
+
+nav .navbar-brand {
+    font-size: 20px;
+}
+
+nav ul li {
+    font-size: 20px;
+    padding: 0px 30px;
+}
+
+.toSmall {
+    font-size: 15px;
+}
+
+a.active {
+    font-weight: 700 !important;
+}
+
+.navbar a {
+    color: #17a2b8;
+    font-weight: 500;
+}
+
+.bg-white {
+    background-color: #fff;
+}

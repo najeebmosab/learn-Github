@@ -1,0 +1,24 @@
+.img-fluid {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+.shad {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.toPosition {
+    position: relative;
+}
+
+.card {
+    height: 100%;
+    color: #17a2b8;
+}
+
+.btn-info:hover {
+    background-color: #fff;
+    color: #17a2b8;
+}
